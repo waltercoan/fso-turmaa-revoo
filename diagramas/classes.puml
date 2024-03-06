@@ -3,6 +3,9 @@ skinparam classAttributeIconSize 0
 ' left to right direction
 caption Diagrama de entidades
 namespace entidades {
+    class Object{
+        + toString():String
+    }
     class Cliente {
         - String nome
         - String endereco
@@ -11,7 +14,23 @@ namespace entidades {
         + setNome(nome:String):void
         + getEndereco():String
         + setEndereco(endereco:String ):void
+        + toString():String
+        + getCidade():Cidade
+        + setCidade(cidade:Cidade):void
     }
+    class Cidade {
+        - String nome
+        + Cidade(nome:String)
+    }
+    class Fornecedor {
+        - String nome
+        + Fornecedor(nome:String)
+        + getCidade():Cidade
+        + setCidade(cidade:Cidade):void
+    }
+    Cliente --|> Object
+    Cliente "-cidade *" -> "1" Cidade
+    Fornecedor "-cidade *" -> "1" Cidade
 }
 
 @enduml

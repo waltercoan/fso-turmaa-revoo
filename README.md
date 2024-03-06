@@ -28,5 +28,11 @@
 4. Selecionar a pasta do projeto
 5. Digitar o nome do projeto <ENTER>
 
+
+### Construtores
+1. Inicialização de variáveis
+2. Obrigar a passagem de um varlor por parametro na instânciação do objeto
+
+
 ## Classes de Entidade
 ![Diagrama de Classes](diagramas/png/classes.png "Diagrama")
