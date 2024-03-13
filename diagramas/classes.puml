@@ -39,5 +39,27 @@ namespace entidades {
     Cliente "-listaPokemon 1" -> "*" Pokemon
     Fornecedor "-cidade *" -> "1" Cidade
 }
-
+namespace javax.swing {
+    class JFrame {
+    }
+}
+namespace telas {
+    
+    class TelaPrincipal {
+        + TelaPrincipal()   
+    }
+    TelaPrincipal --|> javax.swing.JFrame
+    TelaPrincipal --> controladores.TelaPrincipalControlador
+}
+namespace controladores {
+    class TelaPrincipalControlador{
+        + actionPerformed(e:ActionEvent):void
+    }
+    TelaPrincipalControlador ..|> java.awt.event.ActionListener
+}
+namespace java.awt.event {
+    interface ActionListener{
+        + actionPerformed(e:ActionEvent):void
+    }
+}
 @enduml
