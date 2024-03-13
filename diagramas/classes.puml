@@ -28,8 +28,15 @@ namespace entidades {
         + getCidade():Cidade
         + setCidade(cidade:Cidade):void
     }
+    class Pokemon {
+        - String nome
+        + Pokemon(nome:String)
+        + toString():String
+    }
+
     Cliente --|> Object
     Cliente "-cidade *" -> "1" Cidade
+    Cliente "-listaPokemon 1" -> "*" Pokemon
     Fornecedor "-cidade *" -> "1" Cidade
 }
 
